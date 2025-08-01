@@ -16,7 +16,7 @@ jobs:
                  chmod +x ascci-script.sh  
                  ./ascci-script.sh
             - name: Updload artifact
-              uses: actions/upload-atrifact@4
+              uses: actions/upload-artifact@v4
               with:
                 name: dragon-text-file
                 path: dragon.txt
@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: download artifact
-              uses: actions/download-atrifact@4
+              uses: actions/download-artifact@4
               with:
                 name: dragon-text-file
             - name: Sleep for 10 seconds
@@ -37,7 +37,7 @@ jobs:
         runs-on: ubuntu-lastest
         steps:
             - name: download artifact
-              uses: actions/download-atrifact@4
+              uses: actions/download-artifact@4
               with:
                 name: dragon-text-file
             - name: deploy the file
