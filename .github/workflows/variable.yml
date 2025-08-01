@@ -1,8 +1,9 @@
 name: Docker build
 
 on:
-    schedule:
-      - cron: "*/1 * * * *"
+    workflow_dispatch: 
+    # schedule:
+    #   - cron: "*/1 * * * *"
     # push
 env:
     Container_registry: docker.io
