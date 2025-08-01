@@ -26,7 +26,7 @@ jobs:
           - name: Docker login           
             run: echo "${{ secrets.DOCKER_PASSWD }}" | docker login --username=$docker_username --password-stdin
           - name: docker publish
-            timeout-minutes: 1
+            # timeout-minutes: 1
             run: | 
                echo docker push -t $Container_registry/$docker_username/$Image_name:latest
                sleep 600s
