@@ -2,6 +2,8 @@ name: Generate ASCII Artwork
 
 on:
     push
+env:
+    Container_registry: 
 
 jobs:
     build_job:
