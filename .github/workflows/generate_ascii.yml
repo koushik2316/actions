@@ -4,7 +4,7 @@ on:
     push
 
 jobs:
-    accii_job:
+    build_job:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
@@ -15,6 +15,19 @@ jobs:
               run: |
                  chmod +x ascci-script.sh  
                  ./ascci-script.sh
+    test_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Sleep for 10 seconds
+              run:  sleep 10
+            - name: Test File Exist
+              run: grep -i "dragon" dragon.txt
+    deploy_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: deploy the file
+              run:  cat dragon.txt
+
               
 
            
