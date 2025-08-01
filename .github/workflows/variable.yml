@@ -1,7 +1,9 @@
 name: Docker build
 
 on:
-    push
+    schedule:
+      - cron: "*/1 * * * *"
+    # push
 env:
     Container_registry: docker.io
     docker_username: koushikn23
