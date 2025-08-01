@@ -9,18 +9,11 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
+            - name: List the files
+              run:  ls -ltr
+            - name: Excute the script
+              run: chmod +x ascci-script.sh | ./ascci-script.sh
+              
 
-            - name: Install Cowsay Program
-              run: sudo apt-get install cowsay -y
-            - name: Execute Cowsay CMD
-              run: cowsay -f dragon "Run for cover, I am Dragon" >> dragon.txt
-            - name: Test the file
-              run: grep -i "dragon" dragon.txt
-            - name: Read the file
-              run: cat dragon.txt
-            - name: List and Read file
-              run: |
-                 echo "My first github"
-                 ls -ltr
-                 cat README.md
+           
 
