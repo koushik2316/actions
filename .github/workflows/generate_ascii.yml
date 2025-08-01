@@ -12,7 +12,9 @@ jobs:
             - name: List the files
               run:  ls -ltr
             - name: Excute the script
-              run: chmod +x ascci-script.sh | ./ascci-script.sh
+              run: |
+                 chmod +x ascci-script.sh  
+                 ./ascci-script.sh
               
 
            
